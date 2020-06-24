@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Corona cases in your district!</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+</head>
+<body>
+  <div class="row">
+    <div class="col s12 m8">
+      <div class="card">
+        <div class="card-content">
+          <span class="card-title">Corona counts in your district!</span>
+
+            <form action="" method="POST">
+              <div class="row">
+                <div class="input-field col s12 ">
+                  <!-- <input id="district" type="text" class="validate">
+                  <label for="district">Your district name</label> -->
+                  {% csrf_token %}
+                  {{ form }}
+                </div>
+              </div>
+              <div class="row">
+                <div class="col">
+                  
+                  <p>Active Cases in {{distname}}: {{count}} </p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+                    <i class="material-icons right">send</i>
+                  </button>
+                </div>
+              </div>
+            </form>
+           
+
+          </div>
+        </div>
+      </div>
+  </div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</html>
